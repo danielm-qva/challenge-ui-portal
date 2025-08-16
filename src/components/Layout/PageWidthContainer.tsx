@@ -1,29 +1,21 @@
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
-const sxBase = {
-  margin: '0 auto',
-  maxWidth: 1445,
-  width: '100%',
-  '.page-wrapper': {
-    padding: '0!important'
-  }
-};
+// const sxBase: CSSProperties = {
+//   margin: '0 auto',
+//   maxWidth: 1445,
+//   width: '100%',
+//   padding: 0,
+// };
 
 const PageWidthContainer = ({
   children,
-  className,
-  sx
+  className
 }: {
   children: ReactNode;
   className?: string;
-  sx?: object;
 }) => {
-  return (
-    <div className={cn('page-wrapper', className)} style={{ ...sxBase, ...sx }}>
-      {children}
-    </div>
-  );
+  return <div className={cn('mx-auto w-full max-w-[1445px]', className)}>{children}</div>;
 };
 
 export default PageWidthContainer;
