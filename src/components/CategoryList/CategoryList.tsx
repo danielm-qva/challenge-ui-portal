@@ -1,11 +1,11 @@
 import CardCategory from '@/components/CategoryList/card-categori';
 import { ICategory } from '@/type';
-import { Pill, Syringe, Activity } from "lucide-react"; // ejemplo de íconos
+import { Pill, Syringe, Activity } from 'lucide-react'; // ejemplo de íconos
 
 export const iconMap: Record<number, React.ReactNode> = {
-  1: <Pill className="w-6 h-6" />,
-  2: <Syringe className="w-6 h-6" />,
-  3: <Activity className="w-6 h-6" />,
+  1: <Pill className="h-6 w-6" />,
+  2: <Syringe className="h-6 w-6" />,
+  3: <Activity className="h-6 w-6" />
 };
 
 export default async function MedicationsList() {

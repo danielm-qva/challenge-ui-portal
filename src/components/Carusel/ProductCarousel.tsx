@@ -60,7 +60,6 @@ const ProductCarousel = ({ products }: Props) => {
     return () => ref.removeEventListener('scroll', handleScroll);
   }, [cardsPerView]);
 
-
   return (
     <div className="relative my-[40px] w-full">
       <button

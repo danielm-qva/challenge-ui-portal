@@ -5,7 +5,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-
 export function getRandomUnique<T>(arr: T[], count: number): T[] {
   const copy = [...arr];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -14,5 +13,3 @@ export function getRandomUnique<T>(arr: T[], count: number): T[] {
   }
   return copy.slice(0, count);
 }
-
-

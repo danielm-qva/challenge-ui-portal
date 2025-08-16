@@ -34,7 +34,6 @@ export async function Carousel() {
         <h2 className="mb-8 text-[20px]  text-gray-900">Lo más vendido</h2>
         <ProductCarousel products={carouselProducts} />
       </div>
-
     </Suspense>
   );
 }
