@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import ProductCard from '@/components/ProductCard';
+import ProductCard from '@/components/ProductCard/product-card';
 import { IProduct } from '../../../interface/product';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 

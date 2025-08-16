@@ -1,5 +1,5 @@
 import { IProduct } from '../../../interface/product';
-import ProductCard from '../ProductCard';
+import ProductCard from '../ProductCard/product-card';
 import { Suspense } from 'react';
 
 export default async function SectionBanner() {
