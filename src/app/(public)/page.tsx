@@ -6,16 +6,14 @@ import DrugStoreBanner from '@/components/PharmacyBanner/PharmacyBanner';
 import { Carousel } from '@/components/Carusel';
 import { GridBanner } from '@/components/GridBanner';
 
-
 export default function Home() {
-
   return (
     <PageWidthContainer>
       <PromotionalGrid />
       <MedicationsList />
-      <DrugStoreBanner className={'mt-12 px-4 py-8'}/>
-      <SectionBanner/>
-      <GridBanner/>
+      <DrugStoreBanner className={'mt-12 px-4 py-8'} />
+      <SectionBanner />
+      <GridBanner />
       <Carousel />
     </PageWidthContainer>
   );

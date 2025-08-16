@@ -1,11 +1,10 @@
-export  interface IMedia {
+export interface IMedia {
   url: string;
   width: number;
   height: number;
 }
 
-
-export  interface IBanner {
+export interface IBanner {
   name: string;
   desktop: IMedia;
   mobile: IMedia;

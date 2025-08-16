@@ -1,66 +1,66 @@
 .container {
-    position: relative;
-    display: flex;
-    min-width: 146px;
-    min-height: 169px;
-    padding: 20px 4px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #dadff2;
-    border-radius: 10px;
-    gap: 10px;
-    overflow: hidden;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  min-width: 146px;
+  min-height: 169px;
+  padding: 20px 4px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #dadff2;
+  border-radius: 10px;
+  gap: 10px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .container :global(svg) {
-    color: #264092;
+  color: #264092;
 }
 
 .container:hover :global(svg) {
-    color: #e79f00;
+  color: #e79f00;
 }
 
 .container :global(.category-name) {
-    color: #000;
-    text-align: center;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .container :global(.category-image) {
-    transition: filter 0.5s ease;
-    filter: hue-rotate(0deg);
+  transition: filter 0.5s ease;
+  filter: hue-rotate(0deg);
 }
 
 .container:hover :global(.category-image) {
-    filter: hue-rotate(45deg);
+  filter: hue-rotate(45deg);
 }
 
 .container:hover {
-    background: #e0d8d8;
+  background: #e0d8d8;
 }
 
 .container:hover :global(.category-name) {
-    color: #e79f00;
+  color: #e79f00;
 }
 
 .container :global(.semicircle) {
-    width: 100px;
-    height: 100px;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-    border-radius: 50%;
-    background: #e79f00;
-    border: 8px solid #f2c57d;
-    display: none;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  background: #e79f00;
+  border: 8px solid #f2c57d;
+  display: none;
 }
 
 .container:hover :global(.semicircle) {
-    display: flex;
+  display: flex;
 }
