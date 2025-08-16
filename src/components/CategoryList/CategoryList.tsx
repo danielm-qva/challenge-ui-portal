@@ -1,22 +1,32 @@
-import {fetchCategories} from "../../../mock/fecthCategory";
+import CardCategory from '@/components/CategoryList/card-categori';
+import { ICategory } from '@/type';
+import { Pill, Syringe, Activity } from "lucide-react"; // ejemplo de íconos
+
+export const iconMap: Record<number, React.ReactNode> = {
+  1: <Pill className="w-6 h-6" />,
+  2: <Syringe className="w-6 h-6" />,
+  3: <Activity className="w-6 h-6" />,
+};
 
 export default async function MedicationsList() {
-    const {data} = await fetchCategories()
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+  const ress = await fetch(`${baseUrl}/api/categories`, { cache: 'no-store' });
+  const { data } = await ress.json();
 
-    return (
-        <section className="w-full py-8">
-            <div className="container mx-auto px-4">
-                <div className="flex items-center justify-between mb-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800">{'Obtén todo, justo aquí'}</h2>
-                </div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-                {data?.map((medication) => (
-                    <div key={medication.id} className="bg-white rounded-lg shadow-md p-4">
-                        <h3 className="text-lg font-semibold text-gray-800">{medication.name}</h3>
-                    </div>
-                ))}
-            </div>
-        </section>
-    );
+  return (
+    <div className="w-full px-4 py-8">
+      <div className="container mx-auto px-4">
+        <div className="mb-8 flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">
+            {'Obtén todo, justo aquí'}
+          </h2>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-8">
+        {data?.map((cat: ICategory, index: number) => (
+          <CardCategory category={{ ...cat, icons: iconMap[cat.id] }} key={index} />
+        ))}
+      </div>
+    </div>
+  );
 }

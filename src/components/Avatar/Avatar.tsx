@@ -11,7 +11,7 @@ function Avatar({size = "md"}: { size?: "sm" | "md" }) {
     return (
         <div className={`${sizes[size]} rounded-full bg-gray-200 flex items-center justify-center overflow-hidden`}>
             <Image
-                src="/diverse-user-avatars.png"
+                src="/Avatar.png"
                 alt="Usuario"
                 className="h-full w-full object-cover"
                 width={40}
