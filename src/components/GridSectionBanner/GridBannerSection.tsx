@@ -15,7 +15,6 @@ export function PromotionalGrid() {
               priority
               className="object-cover"
             />
-            <div className="relative z-10"></div>
           </div>
           {/* Top right section - Kids products */}
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-300 to-yellow-500 p-6">
