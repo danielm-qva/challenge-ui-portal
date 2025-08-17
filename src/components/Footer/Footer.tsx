@@ -1,14 +1,6 @@
 import type React from 'react';
 
 export default async function Footer() {
-  // const [email, setEmail] = useState("")
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //     e.preventDefault()
-  //     console.log("Email suscrito:", email)
-  //     setEmail("")
-  // }
-
   return (
     <footer className="bg-[var(--color-primary)] text-white">
       <div className="container mx-auto px-4 py-12">
@@ -24,35 +16,36 @@ export default async function Footer() {
           </div>
 
           <div className="md:ml-8 md:flex-shrink-0">
-            {/*<form onSubmit={handleSubmit} className="mb-4 max-w-md mx-auto md:mx-0">*/}
-            {/*    <div className="relative flex bg-white rounded-full overflow-hidden shadow-lg">*/}
-            {/*        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">*/}
-            {/*            <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor"*/}
-            {/*                 viewBox="0 0 24 24">*/}
-            {/*                <path*/}
-            {/*                    strokeLinecap="round"*/}
-            {/*                    strokeLinejoin="round"*/}
-            {/*                    strokeWidth={2}*/}
-            {/*                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"*/}
-            {/*                />*/}
-            {/*            </svg>*/}
-            {/*        </div>*/}
-            {/*        <input*/}
-            {/*            type="email"*/}
-            {/*            value={email}*/}
-            {/*            onChange={(e) => setEmail(e.target.value)}*/}
-            {/*            placeholder="Correo electrónico"*/}
-            {/*            className="flex-1 pl-12 pr-4 py-4 text-gray-900 placeholder-gray-500 focus:outline-none bg-transparent"*/}
-            {/*            required*/}
-            {/*        />*/}
-            {/*        <button*/}
-            {/*            type="submit"*/}
-            {/*            className="px-8 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold transition-colors duration-200 whitespace-nowrap"*/}
-            {/*        >*/}
-            {/*            Enviar*/}
-            {/*        </button>*/}
-            {/*    </div>*/}
-            {/*</form>*/}
+            <div className="relative mb-6 flex overflow-hidden rounded-full bg-white shadow-lg">
+              <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="15"
+                  viewBox="0 0 19 15"
+                  fill="none"
+                >
+                  <path
+                    d="M15.82 0.00937557H2.50003C2.0867 0.00937557 1.70003 0.109375 1.34003 0.309376C0.980034 0.509376 0.693367 0.782708 0.480034 1.12938C0.266701 1.47604 0.160034 1.85604 0.160034 2.26937V12.2694C0.160034 12.6827 0.263368 13.0694 0.470034 13.4294C0.676701 13.7894 0.956701 14.076 1.31003 14.2894C1.66337 14.5027 2.06003 14.6094 2.50003 14.6094H15.82C16.2334 14.6094 16.62 14.506 16.98 14.2994C17.34 14.0927 17.6267 13.8127 17.84 13.4594C18.0534 13.106 18.16 12.7094 18.16 12.2694V2.26937C18.16 1.85604 18.0534 1.47604 17.84 1.12938C17.6267 0.782708 17.34 0.509376 16.98 0.309376C16.62 0.109375 16.2334 0.00937557 15.82 0.00937557ZM2.50003 1.26937H15.82C16.1134 1.26937 16.3534 1.36938 16.54 1.56938C16.7267 1.76937 16.82 2.00271 16.82 2.26937V2.76937L9.66003 7.34938C9.4867 7.42938 9.3067 7.46938 9.12003 7.46938C8.93337 7.46938 8.75337 7.42938 8.58003 7.34938L1.50003 2.76937V2.26937C1.50003 1.97604 1.59337 1.73604 1.78003 1.54938C1.9667 1.36271 2.2067 1.26937 2.50003 1.26937ZM15.82 13.3494H2.50003C2.22003 13.3494 1.98337 13.246 1.79003 13.0394C1.5967 12.8327 1.50003 12.6027 1.50003 12.3494V4.26937L8.00003 8.42938C8.28003 8.65604 8.6667 8.76938 9.16003 8.76938C9.65337 8.76938 10.04 8.65604 10.32 8.42938L16.82 4.26937V12.2694C16.82 12.5627 16.7267 12.816 16.54 13.0294C16.3534 13.2427 16.1134 13.3494 15.82 13.3494Z"
+                    fill="#4C3737"
+                    fill-opacity="0.7"
+                  />
+                </svg>
+              </div>
+              <input
+                type="email"
+                value={''}
+                placeholder="Correo electrónico"
+                className="flex-1 bg-transparent py-4 pl-12 pr-4 text-gray-900 placeholder-gray-500 focus:outline-none"
+                required
+              />
+              <button
+                type="submit"
+                className="whitespace-nowrap bg-yellow-500 px-8 py-4 font-semibold text-white transition-colors duration-200 hover:bg-yellow-600"
+              >
+                Enviar
+              </button>
+            </div>
 
             <p className="mx-auto max-w-md text-center text-xs text-indigo-100 md:mx-0 md:text-right">
               Al suscribirte aceptas nuestros{' '}

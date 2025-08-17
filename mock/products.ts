@@ -18,7 +18,7 @@ export const products = [
   {
     _id: '2',
     name: 'Vitamina B, Nicotinamida',
-    slug: 'Vitamina B, Nicotinamida',
+    slug: 'Vitamina-B-Nicotinamida',
     description: 'Lorem ipsum dolor sit...',
     price: 344.0,
     image: {
@@ -34,7 +34,7 @@ export const products = [
   {
     _id: '3',
     name: 'Vitamina C',
-    slug: 'Vitamina C',
+    slug: 'Vitamina-C',
     description: 'Lorem ipsum dolor sit...',
     price: 34.3,
     image: {
@@ -50,7 +50,7 @@ export const products = [
   {
     _id: '4',
     name: 'Analgan Rapid Paracetamol',
-    slug: 'Analgan Rapid Paracetamol',
+    slug: 'Analgan-Rapid-Paracetamol',
     description: 'Lorem ipsum dolor sit...',
     price: 34.3,
     image: {
@@ -66,7 +66,7 @@ export const products = [
   {
     _id: '5',
     name: 'ASPIRINA ADVANCE',
-    slug: 'ASPIRINA ADVANCE',
+    slug: 'ASPIRINA-ADVANCE',
     description: 'Lorem ipsum dolor sit...',
     price: 322.3,
     image: {

@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { IProduct } from '../../../interface/product';
 import styles from './styles.module.css';
+import Link from 'next/link';
 
 type ProductCardProps = {
   product: IProduct;
@@ -14,13 +15,16 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <>
       <div className={cn(styles.container)}>
-        <Image
-          src={product?.image?.url || ''}
-          alt={product.name}
-          width={product?.image?.width || 276}
-          height={product?.image?.height || 240}
-          className={'w-full'}
-        />
+        <Link href={`/product/${product?.slug}`}>
+          <Image
+            src={product?.image?.url || ''}
+            alt={product.name}
+            width={product?.image?.width || 276}
+            height={product?.image?.height || 240}
+            className={'w-full'}
+          />
+        </Link>
+
         <div className="new-ribbon rounded bg-yellow-600 px-2 py-1 font-bold text-white">Nuevo</div>
 
         {/* <button
@@ -83,7 +87,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 type="number"
                 min="1"
                 max="99"
-                value={3}
                 className="h-8 w-12 border-0 text-center text-sm font-medium focus:ring-0"
                 aria-label="Cantidad"
               />

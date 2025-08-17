@@ -12,10 +12,10 @@ export function SectionImgText() {
               alt="Carrito de compras lleno de productos farmacéuticos"
               width={813}
               height={474}
-              priority
+              loading={'lazy'}
             />
           </div>
-          <div className="text-center lg:text-left lg:w-[60%]">
+          <div className="text-center lg:w-[60%] lg:text-left">
             <h1 className="mb-6 text-4xl font-bold leading-tight text-[var(--color-primary)] lg:text-4xl">
               {'Encuentra todo en un solo lugar'}
             </h1>

@@ -10,3 +10,8 @@ export type ICategory = {
 export type PropsParams = {
   params: Promise<{ id: string }>;
 };
+
+export type PropsProducts = {
+  params: Promise<{ slug: string }>;
+};
+
