@@ -63,12 +63,14 @@ const ProductCarousel = ({ products }: Props) => {
   return (
     <div className="relative my-[40px] w-full">
       <button
+        name={'left'}
         onClick={() => scroll('left')}
         className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-[var(--color-primary)] p-2 shadow-md hover:bg-gray-100"
       >
         <ArrowLeft color="white" />
       </button>
       <button
+        name={'right'}
         onClick={() => scroll('right')}
         className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-[var(--color-primary)] p-2 shadow-md hover:bg-gray-100"
       >
