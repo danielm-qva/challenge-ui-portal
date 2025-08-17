@@ -11,8 +11,6 @@ type ProductCardProps = {
 const ProductCard = ({ product }: ProductCardProps) => {
   const [amount, cents] = product?.price?.toFixed(2)?.split('.') || [];
 
-  // const href = `/${baseUrl}/${product.slug}`.replace('//', '/');
-
   return (
     <>
       <div className={cn(styles.container)}>
@@ -23,7 +21,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
           height={product?.image?.height || 240}
           className={'w-full'}
         />
-        <div className="new-ribbon">Nuevo</div>
+        <div className="new-ribbon rounded bg-yellow-600 px-2 py-1 font-bold text-white">Nuevo</div>
+
         {/* <button
           onClick={toggleFavorite}
           className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center group"

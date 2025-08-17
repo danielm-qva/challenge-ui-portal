@@ -31,7 +31,7 @@ export async function Carousel() {
       }
     >
       <div className={'px-4 py-8'}>
-        <h2 className="mb-8 text-[20px]  text-gray-900">Lo más vendido</h2>
+        <h2 className="mb-8 text-[20px] text-gray-900">Lo más vendido</h2>
         <ProductCarousel products={carouselProducts} />
       </div>
     </Suspense>
