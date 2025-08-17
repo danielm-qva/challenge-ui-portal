@@ -2,6 +2,12 @@ import Image from 'next/image';
 import { products } from '../../../../../mock/products';
 import { IProduct } from '../../../../../interface/product';
 import { PropsProducts } from '@/type';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Detalle de un Producto',
+  description: 'En esta section podra descubrir los detalles de un producto'
+};
 
 export async function generateStaticParams() {
   return products?.slice(0, 5)?.map((item: IProduct) => ({ id: item._id?.toString() }));

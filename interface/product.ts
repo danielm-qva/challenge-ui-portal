@@ -14,4 +14,5 @@ export interface IProduct {
     width: number;
   };
   discount?: string;
+  isNew: boolean,
 }

@@ -9,57 +9,51 @@ export default async function Navbar() {
   return (
     <>
       <nav className="w-full border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between gap-4">
-            {/* Mobile: Hamburger menu + Logo */}
-            <div className="flex items-center gap-3 md:hidden">
-              <button className="p-1">
-                <Menu  aria-label="Icons Menu" className="h-6 w-6 text-gray-700" />
-              </button>
-              <Link href={'/'}>
-                <h1 className="text-xl font-bold text-gray-900">Daniel Mastrapa</h1>
-              </Link>
+        <PageWidthContainer>
+          <div className="container mx-auto px-4 py-3">
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center gap-3 md:hidden">
+                <button className="p-1">
+                  <Menu aria-label="Icons Menu" className="h-6 w-6 text-gray-700" />
+                </button>
+                <Link href={'/'}>
+                  <h1 className="text-xl font-bold text-gray-900">Daniel Mastrapa</h1>
+                </Link>
+              </div>
+
+              <div className="hidden flex-shrink-0 md:flex">
+                <Link href={'/'}>
+                  <h1 className="text-2xl font-bold text-gray-900">Daniel Mastrapa</h1>
+                </Link>
+              </div>
+
+              <div className="hidden max-w-4xl flex-1 items-center gap-4 md:flex">
+                {/* Location selector */}
+                <Localization />
+                <div className="relative max-w-lg flex-1">
+                  {/* Category selector */}
+                  <MenuCategory />
+                  <input
+                    type="text"
+                    placeholder="Busca productos, categorías o marcas..."
+                    className="w-full rounded-md border border-gray-300 py-2 pl-40 pr-4 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+              </div>
+              <HeaderUserSection />
             </div>
 
-            {/* Desktop: Logo */}
-            <div className="hidden flex-shrink-0 md:flex">
-              <Link href={'/'}>
-                <h1 className="text-2xl font-bold text-gray-900">Daniel Mastrapa</h1>
-              </Link>
-
-            </div>
-
-            {/* Desktop: Center section with location, categories, and search */}
-            <div className="hidden max-w-4xl flex-1 items-center gap-4 md:flex">
-              {/* Location selector */}
-              <Localization />
-              <div className="relative max-w-lg flex-1">
-                {/* Category selector */}
-                <MenuCategory />
+            <div className="mt-3 md:hidden">
+              <div className="relative">
                 <input
                   type="text"
                   placeholder="Busca productos, categorías o marcas..."
-                  className="w-full rounded-md border border-gray-300 py-2 pl-40 pr-4 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full rounded-md border border-gray-300 bg-gray-50 py-3 pl-4 pr-12 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
             </div>
-
-            {/* Location icon + User avatar */}
-            <HeaderUserSection />
           </div>
-
-          <div className="mt-3 md:hidden">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Busca productos, categorías o marcas..."
-                className="w-full rounded-md border border-gray-300 bg-gray-50 py-3 pl-4 pr-12 text-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom navigation */}
+        </PageWidthContainer>
       </nav>
 
       <div className="hidden bg-[var(--color-primary)] text-white md:block">

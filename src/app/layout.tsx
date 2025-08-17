@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Geist_Mono } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 import React from 'react';
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Topnavbar/TopNavbar';
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
   subsets: ['latin']
 });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable} flex min-h-screen flex-col antialiased`}>
+      <body className={`${montserrat.variable} flex min-h-screen flex-col antialiased`}>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />

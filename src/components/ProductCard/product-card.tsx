@@ -24,28 +24,32 @@ const ProductCard = ({ product }: ProductCardProps) => {
             className={'w-full'}
           />
         </Link>
+        {product?.isNew && (
+          <div className="new-ribbon rounded bg-yellow-600 px-2 py-1 font-bold text-white">
+            Nuevo
+          </div>
+        )}
 
-        <div className="new-ribbon rounded bg-yellow-600 px-2 py-1 font-bold text-white">Nuevo</div>
-
-        {/* <button
-          onClick={toggleFavorite}
-          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-center group"
-          aria-label={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
+        <button
+          className="group absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-sm transition-all duration-200 hover:shadow-md"
+          aria-label={'Agregar a favoritos'}
         >
           <svg
-            className={`w-4 h-4 transition-colors duration-200 ${
-              isFavorite ? "text-red-500 fill-current" : "text-gray-400 group-hover:text-red-400"
-            }`}
-            viewBox="0 0 20 20"
-            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 22 22"
+            fill="none"
           >
             <path
-              fillRule="evenodd"
-              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-              clipRule="evenodd"
+              d="M11.5684 19.0758C11.2567 19.1858 10.7434 19.1858 10.4317 19.0758C7.77337 18.1683 1.83337 14.3825 1.83337 7.96584C1.83337 5.13334 4.11587 2.84167 6.93004 2.84167C8.59837 2.84167 10.0742 3.64834 11 4.89501C11.9259 3.64834 13.4109 2.84167 15.07 2.84167C17.8842 2.84167 20.1667 5.13334 20.1667 7.96584C20.1667 14.3825 14.2267 18.1683 11.5684 19.0758Z"
+              stroke="#3D3D3D"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             />
           </svg>
-        </button> */}
+        </button>
         {/*<ProductFavButton className={'absolute right-[12px] top-[12px]'} />*/}
         <div className="recommended-product-data-container bg-[#f4f6fb]">
           <div className="price">
