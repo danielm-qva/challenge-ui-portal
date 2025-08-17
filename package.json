@@ -11,6 +11,13 @@
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown ."
   },
+  "browserslist": [
+    "last 3 Chrome versions",
+    "last 3 ChromeAndroid versions",
+    "last 2 Safari versions",
+    "last 2 iOS Safari versions",
+    "last 2 Edge versions"
+  ],
   "git": {
     "pre-commit": "lint-staged"
   },
