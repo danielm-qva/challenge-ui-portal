@@ -1,22 +1,18 @@
-import { ICategory } from '@/type';
+import { ICategory, PropsParams } from '@/type';
 import { notFound } from 'next/navigation';
+import { categoriesData } from '../../../../../mock/categories';
 
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  const categories = await fetch(`${baseUrl}/api/categories`, { cache: 'no-store' }).then((res) =>
-    res.json()
-  );
-
-  return categories?.data?.slice(0, 5).map((cat: ICategory) => ({ id: cat.id?.toString() }));
+  // const categories = await fetch(`/api/categories`).then((res) => res.json());
+  return categoriesData?.slice(0, 3).map((cat: ICategory) => ({ id: cat.id?.toString() }));
 }
 
-export default async function CategoryPage({ params }: { params: { id: string } }) {
+export default async function CategoryPage({ params }: PropsParams) {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  const category = await fetch(`${baseUrl}/api/categories/${params.id}`, {
-    next: { revalidate: 3600 }
-  }).then((res) => res.json());
+  const { id } = await params;
+  const category = await fetch(`${baseUrl}/api/categories/${id}`).then((res) => res.json());
 
   if (!category?.data) return notFound();
 
