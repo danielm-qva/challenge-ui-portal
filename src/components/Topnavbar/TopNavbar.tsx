@@ -14,7 +14,7 @@ export default async function Navbar() {
             {/* Mobile: Hamburger menu + Logo */}
             <div className="flex items-center gap-3 md:hidden">
               <button className="p-1">
-                <Menu name={'menu'} className="h-6 w-6 text-gray-700" />
+                <Menu  aria-label="Icons Menu" className="h-6 w-6 text-gray-700" />
               </button>
               <Link href={'/'}>
                 <h1 className="text-xl font-bold text-gray-900">Daniel Mastrapa</h1>

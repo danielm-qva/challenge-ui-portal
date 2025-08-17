@@ -11,6 +11,8 @@ export function PromotionalGrid() {
             alt="Banner"
             fill
             priority
+            loading="eager"
+            decoding="async"
             className="object-cover"
           />
         </div>
@@ -20,6 +22,8 @@ export function PromotionalGrid() {
             alt="Banner2"
             fill
             priority
+            loading="eager"
+            decoding="async"
             className="object-cover"
           />
         </div>
@@ -30,6 +34,8 @@ export function PromotionalGrid() {
             alt="Banner3"
             fill
             priority
+            loading="eager"
+            decoding="async"
             className="object-cover"
           />
         </div>
@@ -44,6 +50,8 @@ export function PromotionalGrid() {
             alt="Banner1M"
             fill
             priority
+            loading="eager"
+            decoding="async"
             className="object-cover"
           />
         </div>
@@ -55,6 +63,8 @@ export function PromotionalGrid() {
             fill
             priority
             className="object-cover"
+            loading="eager"
+            decoding="async"
           />
         </div>
 
@@ -65,6 +75,8 @@ export function PromotionalGrid() {
             fill
             priority
             className="object-cover"
+            loading="eager"
+            decoding="async"
           />
         </div>
       </div>
