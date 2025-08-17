@@ -3,7 +3,7 @@ import { IBanner } from '../../../interface/banner';
 
 export async function GridBanner() {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  const response = await fetch(`${baseUrl}/api/banner`, { cache: 'no-store' });
+  const response = await fetch(`${baseUrl}/api/banner/banner1`, { cache: 'no-store' });
   const { data } = await response.json();
 
   return (
