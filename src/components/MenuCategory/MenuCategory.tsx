@@ -1,16 +1,13 @@
 'use client';
-import React, { memo, useEffect, useId, useMemo, useRef, useState } from 'react';
+import React, { memo, useEffect, useId, useRef, useState } from 'react';
 import { ChevronDown, Grid3X3 } from 'lucide-react';
+import { categoriesData } from '../../../mock/categories';
 
 function MenuCategory() {
   const [showCategoriesDropdown, setShowCategoriesDropdown] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('Categoria');
   const dropdownRef = useRef(null);
   const IdRender = useId();
-
-  const categories = useMemo(() => {
-    return ['Electrónicos', 'Ropa y Accesorios', 'Hogar y Jardín', 'Deportes', 'Libros'];
-  }, []);
 
   useEffect(() => {
     if (!showCategoriesDropdown) return;
@@ -40,16 +37,16 @@ function MenuCategory() {
           id={IdRender}
           className="absolute left-0 top-full z-50 mt-1 w-full min-w-48 rounded-md border border-gray-200 bg-white shadow-lg"
         >
-          {categories.map((category) => (
+          {categoriesData.map((category) => (
             <button
-              key={category}
+              key={category?.id}
               onClick={() => {
                 setShowCategoriesDropdown(false);
-                setSelectedCategory(category);
+                setSelectedCategory(category?.name);
               }}
               className="w-full px-3 py-2 text-left text-sm text-gray-700 first:rounded-t-md last:rounded-b-md hover:bg-gray-100"
             >
-              {category}
+              {category?.name}
             </button>
           ))}
         </div>

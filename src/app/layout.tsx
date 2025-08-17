@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Botifarma',
+  title: process?.env?.NEXT_PUBLIC_APP_NAME || 'Botifarma',
   description:
     'Descubre en  la mejor experiencia de compra online con miles de productos al mejor precio.'
 };

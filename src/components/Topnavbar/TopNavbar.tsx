@@ -3,6 +3,7 @@ import Localization from '@/components/Localization/Localization';
 import MenuCategory from '@/components/MenuCategory/MenuCategory';
 import HeaderUserSection from '@/components/Avatar/Avatar';
 import PageWidthContainer from '@/components/Layout/PageWidthContainer';
+import Link from 'next/link';
 
 export default async function Navbar() {
   return (
@@ -15,12 +16,18 @@ export default async function Navbar() {
               <button className="p-1">
                 <Menu className="h-6 w-6 text-gray-700" />
               </button>
-              <h1 className="text-xl font-bold text-gray-900">Daniel Mastrapa</h1>
+              <Link href={'/'}>
+                <h1 className="text-xl font-bold text-gray-900">Daniel Mastrapa</h1>
+              </Link>
+
             </div>
 
             {/* Desktop: Logo */}
             <div className="hidden flex-shrink-0 md:flex">
-              <h1 className="text-2xl font-bold text-gray-900">Daniel Mastrapa</h1>
+              <Link href={'/'}>
+                <h1 className="text-2xl font-bold text-gray-900">Daniel Mastrapa</h1>
+              </Link>
+
             </div>
 
             {/* Desktop: Center section with location, categories, and search */}
