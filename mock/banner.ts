@@ -12,12 +12,12 @@ export const banner: BannerType = {
       desktop: {
         url: '/images/banner/desktop/Banner-4.webp',
         width: 469,
-        height: 229
+        height: 234
       },
       mobile: {
         url: '/images/banner/desktop/Banner-4.webp',
         width: 469,
-        height: 229
+        height: 234
       }
     },
     {
@@ -26,12 +26,12 @@ export const banner: BannerType = {
       desktop: {
         url: '/images/banner/desktop/Banner-5.webp',
         width: 469,
-        height: 229
+        height: 234
       },
       mobile: {
         url: '/images/banner/desktop/Banner-5.webp',
         width: 469,
-        height: 229
+        height: 234
       }
     },
     {
@@ -40,12 +40,12 @@ export const banner: BannerType = {
       desktop: {
         url: '/images/banner/desktop/Banner-6.webp',
         width: 469,
-        height: 229
+        height: 234
       },
       mobile: {
         url: '/images/banner/desktop/Banner-6.webp',
         width: 469,
-        height: 229
+        height: 234
       }
     }
   ],
