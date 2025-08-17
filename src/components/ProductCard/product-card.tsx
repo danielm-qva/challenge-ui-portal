@@ -91,7 +91,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 type="number"
                 min="1"
                 max="99"
-                className="h-8 w-12 border-0 text-center text-sm font-medium focus:ring-0"
+                defaultValue={1}
+                className="h-8 w-12 border-0 text-center text-sm font-medium focus:ring-0 text-black"
                 aria-label="Cantidad"
               />
 

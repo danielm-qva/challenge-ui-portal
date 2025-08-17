@@ -16,14 +16,10 @@ export const metadata: Metadata = {
     'Descubre en  la mejor experiencia de compra online con miles de productos al mejor precio.'
 };
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} flex min-h-screen flex-col antialiased`}>
+      <body className={`${montserrat.variable} flex min-h-screen flex-col bg-white antialiased`}>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
